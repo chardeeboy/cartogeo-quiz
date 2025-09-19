@@ -9,64 +9,44 @@
     h1 { text-align: center; color: #1e3a8a; }
     p { text-align: center; color: #374151; margin-bottom: 30px; }
     .container { max-width: 800px; margin: auto; }
-    .search-bar { margin-bottom: 20px; text-align: center; }
-    input[type=search] { padding: 10px; width: 70%; border: 1px solid #ccc; border-radius: 5px; }
     ul { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
     li { background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px; display: flex; flex-direction: column; align-items: center; }
-    .set-label { font-weight: bold; color: #2563eb; margin-bottom: 5px; }
-    a { color: #111; text-decoration: none; word-break: break-all; margin-bottom: 10px; }
+    .set-label { font-weight: bold; color: #2563eb; margin-bottom: 10px; }
     .buttons { display: flex; gap: 10px; }
-    button { padding: 6px 12px; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; }
-    .copy { background: #e5e7eb; }
-    .open { background: #2563eb; color: #fff; }
+    button { padding: 6px 12px; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; background: #2563eb; color: #fff; }
     footer { margin-top: 30px; text-align: center; color: #6b7280; font-size: 13px; }
-    @media(max-width: 600px) { ul { grid-template-columns: 1fr; } input[type=search] { width: 100%; } }
+    @media(max-width: 600px) { ul { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>CARTOGEO Quiz Links</h1>
-    <p>Click on a set to open or copy the link. Use the search bar to filter sets.</p>
+    <p>Select a quiz set below to open it.</p>
 
-    <div class="search-bar">
-      <input id="search" type="search" placeholder="Search sets or URLs..." oninput="filter()">
-    </div>
-
-    <ul id="list">
-      <li><div class="set-label">Set 01</div><a href="https://bit.ly/CARTOGEO-Set01" target="_blank">https://bit.ly/CARTOGEO-Set01</a><div class="buttons"><button class="copy" onclick="copyToClipboard('https://bit.ly/CARTOGEO-Set01')">Copy</button><button class="open" onclick="window.open('https://bit.ly/CARTOGEO-Set01','_blank')">Open</button></div></li>
-      <li><div class="set-label">Set 02</div><a href="https://bit.ly/CARTOGEO-Set02" target="_blank">https://bit.ly/CARTOGEO-Set02</a><div class="buttons"><button class="copy" onclick="copyToClipboard('https://bit.ly/CARTOGEO-Set02')">Copy</button><button class="open" onclick="window.open('https://bit.ly/CARTOGEO-Set02','_blank')">Open</button></div></li>
-      <li><div class="set-label">Set 03</div><a href="https://bit.ly/CARTOGEO-Set03" target="_blank">https://bit.ly/CARTOGEO-Set03</a><div class="buttons"><button class="copy" onclick="copyToClipboard('https://bit.ly/CARTOGEO-Set03')">Copy</button><button class="open" onclick="window.open('https://bit.ly/CARTOGEO-Set03','_blank')">Open</button></div></li>
-      <li><div class="set-label">Set 04</div><a href="https://bit.ly/CARTOGEO-Set04" target="_blank">https://bit.ly/CARTOGEO-Set04</a><div class="buttons"><button class="copy" onclick="copyToClipboard('https://bit.ly/CARTOGEO-Set04')">Copy</button><button class="open" onclick="window.open('https://bit.ly/CARTOGEO-Set04','_blank')">Open</button></div></li>
-      <li><div class="set-label">Set 05</div><a href="https://bit.ly/CARTOGEO-Set05" target="_blank">https://bit.ly/CARTOGEO-Set05</a><div class="buttons"><button class="copy" onclick="copyToClipboard('https://bit.ly/CARTOGEO-Set05')">Copy</button><button class="open" onclick="window.open('https://bit.ly/CARTOGEO-Set05','_blank')">Open</button></div></li>
-      <li><div class="set-label">Set 06</div><a href="https://bit.ly/CARTOGEO-Set06" target="_blank">https://bit.ly/CARTOGEO-Set06</a><div class="buttons"><button class="copy" onclick="copyToClipboard('https://bit.ly/CARTOGEO-Set06')">Copy</button><button class="open" onclick="window.open('https://bit.ly/CARTOGEO-Set06','_blank')">Open</button></div></li>
-      <li><div class="set-label">Set 07</div><a href="https://bit.ly/CARTOGEO-Set07" target="_blank">https://bit.ly/CARTOGEO-Set07</a><div class="buttons"><button class="copy" onclick="copyToClipboard('https://bit.ly/CARTOGEO-Set07')">Copy</button><button class="open" onclick="window.open('https://bit.ly/CARTOGEO-Set07','_blank')">Open</button></div></li>
-      <li><div class="set-label">Set 08</div><a href="https://bit.ly/CARTOGEO-Set08" target="_blank">https://bit.ly/CARTOGEO-Set08</a><div class="buttons"><button class="copy" onclick="copyToClipboard('https://bit.ly/CARTOGEO-Set08')">Copy</button><button class="open" onclick="window.open('https://bit.ly/CARTOGEO-Set08','_blank')">Open</button></div></li>
-      <li><div class="set-label">Set 09</div><a href="https://bit.ly/CARTOGEO-Set09" target="_blank">https://bit.ly/CARTOGEO-Set09</a><div class="buttons"><button class="copy" onclick="copyToClipboard('https://bit.ly/CARTOGEO-Set09')">Copy</button><button class="open" onclick="window.open('https://bit.ly/CARTOGEO-Set09','_blank')">Open</button></div></li>
-      <li><div class="set-label">Set 10</div><a href="https://bit.ly/CARTOGEO-Set10" target="_blank">https://bit.ly/CARTOGEO-Set10</a><div class="buttons"><button class="copy" onclick="copyToClipboard('https://bit.ly/CARTOGEO-Set10')">Copy</button><button class="open" onclick="window.open('https://bit.ly/CARTOGEO-Set10','_blank')">Open</button></div></li>
-      <li><div class="set-label">Set 11</div><a href="https://bit.ly/CARTOGEO-Set11" target="_blank">https://bit.ly/CARTOGEO-Set11</a><div class="buttons"><button class="copy" onclick="copyToClipboard('https://bit.ly/CARTOGEO-Set11')">Copy</button><button class="open" onclick="window.open('https://bit.ly/CARTOGEO-Set11','_blank')">Open</button></div></li>
-      <li><div class="set-label">Set 12</div><a href="https://bit.ly/CARTOGEO-Set12" target="_blank">https://bit.ly/CARTOGEO-Set12</a><div class="buttons"><button class="copy" onclick="copyToClipboard('https://bit.ly/CARTOGEO-Set12')">Copy</button><button class="open" onclick="window.open('https://bit.ly/CARTOGEO-Set12','_blank')">Open</button></div></li>
-      <li><div class="set-label">Set 13</div><a href="https://bit.ly/CARTOGEO-Set13" target="_blank">https://bit.ly/CARTOGEO-Set13</a><div class="buttons"><button class="copy" onclick="copyToClipboard('https://bit.ly/CARTOGEO-Set13')">Copy</button><button class="open" onclick="window.open('https://bit.ly/CARTOGEO-Set13','_blank')">Open</button></div></li>
-      <li><div class="set-label">Set 14</div><a href="https://bit.ly/CARTOGEO-Set14" target="_blank">https://bit.ly/CARTOGEO-Set14</a><div class="buttons"><button class="copy" onclick="copyToClipboard('https://bit.ly/CARTOGEO-Set14')">Copy</button><button class="open" onclick="window.open('https://bit.ly/CARTOGEO-Set14','_blank')">Open</button></div></li>
-      <li><div class="set-label">Set 15</div><a href="https://bit.ly/CARTOGEO-Set15" target="_blank">https://bit.ly/CARTOGEO-Set15</a><div class="buttons"><button class="copy" onclick="copyToClipboard('https://bit.ly/CARTOGEO-Set15')">Copy</button><button class="open" onclick="window.open('https://bit.ly/CARTOGEO-Set15','_blank')">Open</button></div></li>
-      <li><div class="set-label">Set 16</div><a href="https://bit.ly/CARTOGEO-Set16" target="_blank">https://bit.ly/CARTOGEO-Set16</a><div class="buttons"><button class="copy" onclick="copyToClipboard('https://bit.ly/CARTOGEO-Set16')">Copy</button><button class="open" onclick="window.open('https://bit.ly/CARTOGEO-Set16','_blank')">Open</button></div></li>
-      <li><div class="set-label">Set 17</div><a href="https://bit.ly/CARTOGEO-Set17" target="_blank">https://bit.ly/CARTOGEO-Set17</a><div class="buttons"><button class="copy" onclick="copyToClipboard('https://bit.ly/CARTOGEO-Set17')">Copy</button><button class="open" onclick="window.open('https://bit.ly/CARTOGEO-Set17','_blank')">Open</button></div></li>
-      <li><div class="set-label">Set 18</div><a href="https://bit.ly/CARTOGEO-Set18" target="_blank">https://bit.ly/CARTOGEO-Set18</a><div class="buttons"><button class="copy" onclick="copyToClipboard('https://bit.ly/CARTOGEO-Set18')">Copy</button><button class="open" onclick="window.open('https://bit.ly/CARTOGEO-Set18','_blank')">Open</button></div></li>
+    <ul>
+      <li><div class="set-label">Set 01 (Q1-50)</div><div class="buttons"><button onclick="window.open('https://bit.ly/CARTOGEO-Set01','_blank')">Open</button></div></li>
+      <li><div class="set-label">Set 02 (Q51-100)</div><div class="buttons"><button onclick="window.open('https://bit.ly/CARTOGEO-Set02','_blank')">Open</button></div></li>
+      <li><div class="set-label">Set 03 (Q101-150)</div><div class="buttons"><button onclick="window.open('https://bit.ly/CARTOGEO-Set03','_blank')">Open</button></div></li>
+      <li><div class="set-label">Set 04 (Q151-200)</div><div class="buttons"><button onclick="window.open('https://bit.ly/CARTOGEO-Set04','_blank')">Open</button></div></li>
+      <li><div class="set-label">Set 05 (Q201-250)</div><div class="buttons"><button onclick="window.open('https://bit.ly/CARTOGEO-Set05','_blank')">Open</button></div></li>
+      <li><div class="set-label">Set 06 (Q251-300)</div><div class="buttons"><button onclick="window.open('https://bit.ly/CARTOGEO-Set06','_blank')">Open</button></div></li>
+      <li><div class="set-label">Set 07 (Q301-350)</div><div class="buttons"><button onclick="window.open('https://bit.ly/CARTOGEO-Set07','_blank')">Open</button></div></li>
+      <li><div class="set-label">Set 08 (Q351-400)</div><div class="buttons"><button onclick="window.open('https://bit.ly/CARTOGEO-Set08','_blank')">Open</button></div></li>
+      <li><div class="set-label">Set 09 (Q401-450)</div><div class="buttons"><button onclick="window.open('https://bit.ly/CARTOGEO-Set09','_blank')">Open</button></div></li>
+      <li><div class="set-label">Set 10 (Q451-500)</div><div class="buttons"><button onclick="window.open('https://bit.ly/CARTOGEO-Set10','_blank')">Open</button></div></li>
+      <li><div class="set-label">Set 11 (Q501-550)</div><div class="buttons"><button onclick="window.open('https://bit.ly/CARTOGEO-Set11','_blank')">Open</button></div></li>
+      <li><div class="set-label">Set 12 (Q551-600)</div><div class="buttons"><button onclick="window.open('https://bit.ly/CARTOGEO-Set12','_blank')">Open</button></div></li>
+      <li><div class="set-label">Set 13 (Q601-650)</div><div class="buttons"><button onclick="window.open('https://bit.ly/CARTOGEO-Set13','_blank')">Open</button></div></li>
+      <li><div class="set-label">Set 14 (Q651-700)</div><div class="buttons"><button onclick="window.open('https://bit.ly/CARTOGEO-Set14','_blank')">Open</button></div></li>
+      <li><div class="set-label">Set 15 (Q701-750)</div><div class="buttons"><button onclick="window.open('https://bit.ly/CARTOGEO-Set15','_blank')">Open</button></div></li>
+      <li><div class="set-label">Set 16 (Q751-800)</div><div class="buttons"><button onclick="window.open('https://bit.ly/CARTOGEO-Set16','_blank')">Open</button></div></li>
+      <li><div class="set-label">Set 17 (Q801-850)</div><div class="buttons"><button onclick="window.open('https://bit.ly/CARTOGEO-Set17','_blank')">Open</button></div></li>
+      <li><div class="set-label">Set 18 (Q851-890)</div><div class="buttons"><button onclick="window.open('https://bit.ly/CARTOGEO-Set18','_blank')">Open</button></div></li>
     </ul>
 
     <footer>Hosted with ❤️ on GitHub Pages</footer>
   </div>
-
-  <script>
-    function copyToClipboard(text) {
-      navigator.clipboard.writeText(text).then(() => alert('Copied!')).catch(() => prompt('Copy this URL', text));
-    }
-    function filter() {
-      const q = document.getElementById('search').value.toLowerCase();
-      document.querySelectorAll('#list li').forEach(li => {
-        const txt = li.innerText.toLowerCase();
-        li.style.display = txt.includes(q) ? 'flex' : 'none';
-      });
-    }
-  </script>
 </body>
 </html>
+
+Updated index.html to new version with labels and Open buttons only
